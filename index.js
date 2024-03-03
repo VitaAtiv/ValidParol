@@ -8,10 +8,15 @@ function parolValid(event) {
     if (isNotValidEng) {
          isValidParol.classList.add("not-valid");
     }
+
+    
     const firstLiter = event.target.value[0]
     console.log(firstLiter);
     const nonFirstLiter = /^[A-Z]/;
     const isNotValidFirstLiterBig = nonFirstLiter.test(firstLiter);
+    if (!isNotValidFirstLiterBig) {
+    isValidParol.classList.add("not-valid");
+}
 }
 
 
