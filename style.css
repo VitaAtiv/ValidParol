@@ -80,7 +80,9 @@ img {
     background-color: #848181;
 }
  
-
+.not-valid {
+outline: 1px solid #ff0000;
+  }
  
 
 
