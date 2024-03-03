@@ -83,69 +83,8 @@ img {
 
  
 
- 
-.policy{ 
-    position: relative; 
-    padding-left: 10px; 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
- 
-} 
- 
-.input-policy{ 
-    position: absolute; 
-    width: 1px; 
-    height: 1px; 
-    opacity: 0; 
-} 
-.input-policy+span{ 
-    display: inline-block; 
-    width: 16px; 
-    height: 16px; 
-    border: 1px solid #000000; 
-    border-radius: 4px; 
-} 
- 
-.input-policy:checked+span{ 
-    border: 1px solid #0075fe; 
-    background-color:#0075fe; 
-     
-} 
- 
- 
-.input-policy:checked ~ .input-policy-icon{ 
-opacity: 1; 
-} 
- 
-.input-policy-icon{ 
-    position: absolute; 
-    top: 50%; 
-    left: 13px; 
-    width: 10px;     
-    height: 10px; 
-    transform: translateY(-50%); 
-    opacity: 0; 
-    fill: #ffffff; 
-} 
- 
-.input-level:checked{ 
-    outline: 1px solid #0066ff; 
-    outline-offset: 2px; 
-}    
- 
-.input-age{ 
-    outline: none;  
-} 
- 
-.input-age:in-range{ 
-    border: 1px solid #0dff00; 
-} 
- 
-.input-age:out-of-range{ 
-    border: 1px solid #ff0000; 
-} 
- 
+
+
 .input-name{ 
     width: 100%; 
 } 
