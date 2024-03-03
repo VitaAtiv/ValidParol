@@ -1,0 +1,174 @@
+html {
+  box-sizing: border-box;
+}
+html * {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.box {
+    
+    padding: 20px;
+   }
+
+
+   html{   
+    box-sizing: border-box; 
+} 
+html * { 
+    box-sizing: inherit; 
+} 
+body { 
+    margin: 0; 
+     
+} 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p { 
+    margin: 0;       
+} 
+ 
+img{ 
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+} 
+ 
+ 
+
+/* form{ 
+    padding: 20px; 
+}  */
+ 
+.text-firstname{ 
+    position: relative; 
+    padding: 15px; 
+    border: 1px solid #000000; 
+    border-radius: 8px; 
+} 
+.text-name-label{ 
+    position: absolute; 
+    top: 50%; 
+    left: 10px; 
+    transform: translateY(-50%); 
+} 
+ 
+.text-name-input{ 
+    width: 100%; 
+    border: none; 
+    outline: none; 
+} 
+ 
+.box{ 
+    margin-left: 50px; 
+    width: 500px; 
+    border: 1px solid #000000; 
+} 
+ 
+.policy{ 
+    position: relative; 
+    padding-left: 10px; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+ 
+} 
+ 
+.input-policy{ 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    opacity: 0; 
+} 
+.input-policy+span{ 
+    display: inline-block; 
+    width: 16px; 
+    height: 16px; 
+    border: 1px solid #000000; 
+    border-radius: 4px; 
+} 
+ 
+.input-policy:checked+span{ 
+    border: 1px solid #0075fe; 
+    background-color:#0075fe; 
+     
+} 
+ 
+ 
+.input-policy:checked ~ .input-policy-icon{ 
+opacity: 1; 
+} 
+ 
+.input-policy-icon{ 
+    position: absolute; 
+    top: 50%; 
+    left: 13px; 
+    width: 10px;     
+    height: 10px; 
+    transform: translateY(-50%); 
+    opacity: 0; 
+    fill: #ffffff; 
+} 
+ 
+.input-level:checked{ 
+    outline: 1px solid #0066ff; 
+    outline-offset: 2px; 
+}    
+ 
+.input-age{ 
+    outline: none;  
+} 
+ 
+.input-age:in-range{ 
+    border: 1px solid #0dff00; 
+} 
+ 
+.input-age:out-of-range{ 
+    border: 1px solid #ff0000; 
+} 
+ 
+.input-name{ 
+    width: 100%; 
+} 
+.input-name:invalid{ 
+    border: 1px solid #ff0000; 
+} 
+ 
+.input-name:valid{ 
+    border: 1px solid #0dff00; 
+} 
+
+ 
+
+ 
+
+ 
+
+
