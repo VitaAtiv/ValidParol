@@ -10,7 +10,7 @@ function parolValid(event) {
   const bigFirstLiter = /^[A-Z]/; // чи перша літера велика
   const isValidFirstLit = bigFirstLiter.test(parolEl[0]);
 
-  if (!isNotValidEng && !isNumberInPass && !isValidFirstLit) {
+  if (isNotValidEng && !isNumberInPass && !isValidFirstLit) {
     isValidParol.classList.add("not-valid");
     return;
   } else {
@@ -59,17 +59,18 @@ const sendForm = document.querySelector(".forma");
 
   
     
-    function submitForm(event) {
-        event.preventDefault();
-        const validCheck = agreeCheck.checked
-        if (!validCheck) {
-            return false
-        } else {
+function submitForm(event) {
+    event.preventDefault();
+    const validCheck = agreeCheck.checked
+    if (!validCheck) {
+        return false
+    } else {
         sendForm.addEventListener("submit", function () {
-          document.getElementById("name").value = "";
+            document.getElementById("name").value = "";
         });
-    return true; 
-        }
+        return true;
+    }
+}
 
 
 
