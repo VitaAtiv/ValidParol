@@ -1,4 +1,4 @@
-const isValidParol = document.querySelector(".text-parol-input");
+const isValidParol = document.querySelector(".textParolInput");
 
 function parolValid(event) {
   const parolEl = event.target.value;
@@ -37,16 +37,57 @@ isValidParol.addEventListener("input", parolValid);
 
 
 
-const changeColorBox = document.querySelector(".box");
-const colorBtn = document.querySelector(".colorBtn");
+const refs = {
+  box: document.querySelector(".box"),
+  btn: document.querySelector(".colorBtn"),
+};
 
-function generateRandomColor() {
-       
-       const anyColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+function generateRandomColor() {       
+    const anyColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     return anyColor;
-    
    }
+refs.btn.addEventListener("click", onClickBtn);
+function onClickBtn(event) {
+    const anyColor = generateRandomColor();
+    refs.box.style.backgroundColor = anyColor;
+}
 
 
-    const anyColor = generateRandomColor();   
-    changeColorBox.style.backgroundColor = anyColor;
+
+const agreeCheck = document.querySelector(".checkLabelInput");
+
+function onSubmit(event) {
+  event.preventDefault();
+
+//   const data = new FormData(event.currentTarget);
+//   console.log(data);
+//   const validData = {};
+//   data.forEach((value, key) => {
+//     console.log(key, value);
+//     validData[key] = value;
+//   });
+//   console.log(validData);
+}
+
+agreeCheck.addEventListener("submit", onSubmit);
+
+function submitForm() {
+  // Отримання елемента checkbox
+  const agreeCheckbox = document.getElementById("agreeCheckbox");
+
+  // Перевірка, чи checkbox відмічений
+  if (!agreeCheckbox.checked) {
+    // Якщо checkbox не відмічений, встановлюємо атрибут disabled для кнопки
+    alert("Будь ласка, погодьтеся з умовами перед відправленням форми.");
+    return false; // Відміна відправки форми
+  } else {
+    // Якщо checkbox відмічений, додаємо обробник подій для події submit
+    document.getElementById("myForm").addEventListener("submit", function () {
+      // Очищення значень усіх полів форми
+      document.getElementById("name").value = "";
+      // Якщо є інші поля, додайте їх очищення тут
+    });
+    return true; // Продовжити відправку форми
+  }
+}
+

@@ -29,7 +29,7 @@ img {
   height: auto;
 }
 
-.color-btn {
+.colorBtn {
   margin: 20px;
   padding: 10px;
   border: 2px solid #8f59a7;
@@ -85,8 +85,7 @@ img {
 .check-label {
   color: #ffffff;
 }
-.check-label-input {
-}
+
 .check-btn {
   color: #ffffff;
   background-color: #848181;
