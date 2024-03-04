@@ -1,50 +1,52 @@
 const isValidParol = document.querySelector(".text-parol-input");
 
 function parolValid(event) {
-   
-    const parolEl = event.target.value;
-    console.log(parolEl);
+  const parolEl = event.target.value;
+
+  const validEnglish = /[^A-Za-z]/; // чи всі англ
+  const isNotValidEng = validEnglish.test(parolEl);
+  const NumberInStr = /\d/; // чи є число
+  const isNumberInPass = NumberInStr.test(parolEl);
+  const bigFirstLiter = /^[A-Z]/; // чи перша літера велика
+  const isValidFirstLit = bigFirstLiter.test(parolEl[0]);
+
+  if (!isNotValidEng && !isNumberInPass && !isValidFirstLit) {
+    isValidParol.classList.add("not-valid");
+    return;
+  } else {
+    console.log("Пароль валідний.");
+  }
+}
+
+// function validatePassword(password) {
+//   // Починатися з великої літери, містити одне число і складатися тільки з англійських літер
+//   const passwordPattern = /^(?=.*[A-Z])(?=.*\d)^[A-Za-z\d]+$/;
+
+//   return passwordPattern.test(password);
+// }
+
+// // Приклад використання:
+// const passwordToValidate = "Password123";
+// if (validatePassword(passwordToValidate)) {
+//   console.log("Пароль відповідає умовам валідації.");
+// } else {
+//   console.log("Пароль не відповідає умовам валідації.");
+// }
+
+isValidParol.addEventListener("input", parolValid);
 
 
-    const nonEnglishRegex = /[^A-Za-z]/;
-    const isNotValidEng = nonEnglishRegex.test(parolEl);
-    if (isNotValidEng) {
-        isValidParol.classList.add("not-valid");
-        alert('У пароля перша літера маленька.')
-    }
 
-    const NumberInStr = /\d/;
-    const isNumberInPass = NumberInStr.test(parolEl)
-    if (!isNumberInPass) {
-        isValidParol.classList.add("not-valid");
-        alert('Пароль не містить жодного числа.')
-    }
+const changeColorBox = document.querySelector(".box");
+const colorBtn = document.querySelector(".colorBtn");
+
+function generateRandomColor() {
+       
+       const anyColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    return anyColor;
     
-    const firstLiter = event.target.value[0]
-    console.log(firstLiter);
-    const nonFirstLiter = /^[A-Z]/;
-    const isNotValidFirstLiterBig = nonFirstLiter.test(firstLiter);
-    if (!isNotValidFirstLiterBig) {
-        isValidParol.classList.add("not-valid");
-        alert('У пароля перша літера маленька.')
-}
-
-const 
-
-  
-        function checkForNumber() {
-            // Отримуємо значення інпута
-            var password = document.getElementById('passwordInput').value;
-
-            // Перевіряємо, чи містить хоча б одне число
-            if (/\d/.test(password)) {
-                alert('Пароль містить хоча б одне число.');
-            } else {
-                alert('Пароль не містить жодного числа.');
-            }
-        }
-  
-}
+   }
 
 
-    isValidParol.addEventListener("input", parolValid)
+    const anyColor = generateRandomColor();   
+    changeColorBox.style.backgroundColor = anyColor;

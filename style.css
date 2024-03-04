@@ -29,79 +29,80 @@ img {
   height: auto;
 }
 
-
-
- .box {
-    margin: 20px;
-    padding: 20px 0;  
-    width: 400px; 
-    border: 1px solid #8f59a7;
-    border-radius: 10px;
-    background-color: #8f59a7;
- }
-
- .text-firstname, .text-name, .parol, .check {
-    position: relative; 
-    margin: 10px auto;
-    padding: 10px; 
-    width: 300px; 
-    border: 1px solid #ffffff; 
-    border-radius: 8px; 
- }
-
-.check {
-    display: flex;
-    gap: 40px
+.color-btn {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #8f59a7;
+  color: #000000;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.text-firstname-input, .text-name-input, .text-parol-input { 
-    width: 100%; 
-    border: none; 
-    outline: none; 
-} 
+.box {
+  margin: 20px;
+  padding: 20px 0;
+  width: 400px;
+  border: 1px solid #8f59a7;
+  border-radius: 10px;
+  background-color: #8f59a7;
+}
 
-.text-firstname-label, .text-name-label, .text-parol-label { 
-    /* position: absolute; 
+.text-firstname,
+.text-name,
+.parol,
+.check {
+  position: relative;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+
+.check {
+  display: flex;
+  gap: 40px;
+}
+
+.text-firstname-input,
+.text-name-input,
+.text-parol-input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.text-firstname-label,
+.text-name-label,
+.text-parol-label {
+  /* position: absolute; 
     top: -50%; 
     left: 10px; 
     transform: translateY(-50%);  */
-    color: #ffffff;
-} 
+  color: #ffffff;
+}
 
 .check-label {
-    color: #ffffff;
-    
+  color: #ffffff;
 }
 .check-label-input {
-    
 }
 .check-btn {
-    color: #ffffff;
-    background-color: #848181;
+  color: #ffffff;
+  background-color: #848181;
 }
- 
+
 .not-valid {
-outline: 1px solid #ff0000;
-  }
- 
+  outline: 1px solid #ff0000;
+}
 
+.input-name {
+  width: 100%;
+}
+.input-name:invalid {
+  border: 1px solid #ff0000;
+}
 
-
-.input-name{ 
-    width: 100%; 
-} 
-.input-name:invalid{ 
-    border: 1px solid #ff0000; 
-} 
- 
-.input-name:valid{ 
-    border: 1px solid #0dff00; 
-} 
-
- 
-
- 
-
- 
-
-
+.input-name:valid {
+  border: 1px solid #0dff00;
+}
