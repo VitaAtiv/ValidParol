@@ -55,19 +55,25 @@ function onClickBtn(event) {
 
 
 const agreeCheck = document.querySelector(".checkLabelInput");
+const sendForm = document.querySelector(".forma");
 
-function onSubmit(event) {
-  event.preventDefault();
+  
+    
+    function submitForm(event) {
+        event.preventDefault();
+        const validCheck = agreeCheck.checked
+        if (!validCheck) {
+            return false
+        } else {
+        sendForm.addEventListener("submit", function () {
+          document.getElementById("name").value = "";
+        });
+    return true; 
+        }
 
-//   const data = new FormData(event.currentTarget);
-//   console.log(data);
-//   const validData = {};
-//   data.forEach((value, key) => {
-//     console.log(key, value);
-//     validData[key] = value;
-//   });
-//   console.log(validData);
-}
+
+
+
 
 agreeCheck.addEventListener("submit", onSubmit);
 
