@@ -1,3 +1,6 @@
+import { generateRandomColor } from "./helpers/generateRandomColor.js";
+import { submitForm } from "./helpers/submitForm.js";
+
 const isValidParol = document.querySelector(".textParolInput");
 
 function parolValid(event) {
@@ -42,12 +45,9 @@ const refs = {
   btn: document.querySelector(".colorBtn"),
 };
 
-function generateRandomColor() {       
-    const anyColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    return anyColor;
-   }
+
 refs.btn.addEventListener("click", onClickBtn);
-function onClickBtn(event) {
+function onClickBtn() {
     const anyColor = generateRandomColor();
     refs.box.style.backgroundColor = anyColor;
 }
@@ -59,18 +59,7 @@ const sendForm = document.querySelector(".forma");
 
   
     
-function submitForm(event) {
-    event.preventDefault();
-    const validCheck = agreeCheck.checked
-    if (!validCheck) {
-        return false
-    } else {
-        sendForm.addEventListener("submit", function () {
-            document.getElementById("name").value = "";
-        });
-        return true;
-    }
-}
+
 
 
 
